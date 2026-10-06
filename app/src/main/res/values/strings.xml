@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PosePilot</string>
+    <string name="app_tagline">Pose guidance for better photos</string>
+
+    <string name="nav_home">Home</string>
+    <string name="nav_camera">Camera</string>
+    <string name="nav_poses">Poses</string>
+    <string name="nav_history">History</string>
+    <string name="nav_profile">Profile</string>
+
+    <string name="home_greeting">Strike a better pose</string>
+    <string name="home_choose_mode">Choose a mode</string>
+    <string name="home_best_score_title">Your best score</string>
+    <string name="home_best_score_empty">Your best score will appear here after your first session.</string>
+    <string name="home_camera_note">Camera access is required during a session.</string>
+
+    <string name="pose_mode_solo">Solo</string>
+    <string name="pose_mode_couple">Couple</string>
+    <string name="pose_mode_group">Group</string>
+    <string name="pose_mode_solo_desc">Single-person framing and balance.</string>
+    <string name="pose_mode_couple_desc">Two-person spacing and alignment.</string>
+    <string name="pose_mode_group_desc">Everyone visible, nobody cropped.</string>
+
+    <string name="button_start_session">Start session</string>
+    <string name="button_browse_poses">Browse poses</string>
+
+    <string name="placeholder_camera_title">Camera coming next</string>
+    <string name="placeholder_camera_body">Phase 2 adds the live camera preview, capture, and on-device pose detection.</string>
+    <string name="placeholder_poses_body">Phase 2 fills this screen with the full pose catalog for every mode.</string>
+    <string name="placeholder_history_title">History coming next</string>
+    <string name="placeholder_history_body">Phase 2 keeps a local log of sessions, photos, and scores.</string>
+    <string name="placeholder_profile_title">Profile coming next</string>
+    <string name="placeholder_profile_body">Phase 2 adds your name, settings, and saved favorites.</string>
+
+    <string name="sample_catalog">Sample catalog</string>
+    <string name="history_empty">Your best score will appear here after your first session.</string>
+    <string name="profile_name_hint">Your name</string>
+</resources>
