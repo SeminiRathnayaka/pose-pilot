@@ -18,25 +18,20 @@ class HomeScreenTest {
     val composeRule = createAndroidComposeRule<MainActivity>()
 
     @Test
-    fun homeScreenShowsModeCardsAndActions() {
+    fun homeScreenShowsModeCardsAndHeroActions() {
         composeRule.onNodeWithTag("screen_home").assertIsDisplayed()
         composeRule.onNodeWithTag("mode_card_solo").assertIsDisplayed()
         composeRule.onNodeWithTag("mode_card_couple").assertIsDisplayed()
-        composeRule.onNodeWithTag("mode_card_group").assertIsDisplayed()
-        composeRule.onNodeWithText(
-            composeRule.activity.getString(R.string.button_start_session),
-        ).performScrollTo().assertIsDisplayed()
-        composeRule.onNodeWithText(
-            composeRule.activity.getString(R.string.button_browse_poses),
-        ).performScrollTo().assertIsDisplayed()
+        composeRule.onNodeWithTag("mode_card_group").performScrollTo().assertIsDisplayed()
+        composeRule.onNodeWithTag("mode_card_free").performScrollTo().assertIsDisplayed()
+        composeRule.onNodeWithTag("button_start_shooting").performScrollTo().assertIsDisplayed()
+        composeRule.onNodeWithTag("button_explore_poses").performScrollTo().assertIsDisplayed()
     }
 
     @Test
-    fun selectingModeAndStartingSessionOpensCamera() {
+    fun selectingModeAndStartingShootingOpensCamera() {
         composeRule.onNodeWithTag("mode_card_couple").performClick()
-        composeRule.onNodeWithText(
-            composeRule.activity.getString(R.string.button_start_session),
-        ).performScrollTo().performClick()
+        composeRule.onNodeWithTag("button_start_shooting").performScrollTo().performClick()
 
         composeRule.onNodeWithTag("screen_camera").assertIsDisplayed()
         composeRule.onNodeWithText(
@@ -45,9 +40,7 @@ class HomeScreenTest {
     }
 
     @Test
-    fun bestScoreEmptyStateIsShownBeforeFirstSession() {
-        composeRule.onNodeWithText(
-            composeRule.activity.getString(R.string.home_best_score_empty),
-        ).performScrollTo().assertIsDisplayed()
+    fun homeShowsEmptyStatesBeforeFirstUse() {
+        composeRule.onNodeWithTag("recent_empty").performScrollTo().assertIsDisplayed()
     }
 }

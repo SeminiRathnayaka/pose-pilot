@@ -17,29 +17,37 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.posepilot.app.R
 import com.posepilot.app.core.constants.AppConstants
+import com.posepilot.app.core.theme.AppColors
 import com.posepilot.app.core.theme.AppCardStyles
 import com.posepilot.app.shared.model.PoseMode
 
 @Composable
-fun PoseModeCard(
+fun ModeCard(
     mode: PoseMode,
     icon: Painter?,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
+    emphasized: Boolean = false,
 ) {
     Surface(
         onClick = onClick,
         modifier = modifier
             .fillMaxWidth()
-            .heightIn(min = AppConstants.MODE_CARD_MIN_HEIGHT_DP.dp),
+            .heightIn(min = AppConstants.MODE_CARD_MIN_HEIGHT_DP.dp)
+            .testTag("mode_card_${mode.key}"),
         shape = AppCardStyles.shape,
-        color = MaterialTheme.colorScheme.surface,
-        tonalElevation = 1.dp,
+        color = if (emphasized) AppColors.Navy else AppColors.DarkGray,
+        contentColor = AppColors.White,
+        border = androidx.compose.foundation.BorderStroke(
+            width = 1.dp,
+            color = AppColors.FaintBorder,
+        ),
     ) {
         Column(
             modifier = Modifier.padding(16.dp),
@@ -52,7 +60,7 @@ fun PoseModeCard(
             ) {
                 Surface(
                     shape = MaterialTheme.shapes.small,
-                    color = MaterialTheme.colorScheme.secondaryContainer,
+                    color = AppColors.Black,
                     modifier = Modifier.size(44.dp),
                 ) {
                     if (icon != null) {
@@ -60,14 +68,14 @@ fun PoseModeCard(
                             painter = icon,
                             contentDescription = null,
                             modifier = Modifier.padding(10.dp),
-                            tint = MaterialTheme.colorScheme.onSecondaryContainer,
+                            tint = AppColors.LightGray,
                         )
                     }
                 }
                 Text(
                     text = stringResource(mode.labelRes),
                     style = MaterialTheme.typography.titleMedium,
-                    color = MaterialTheme.colorScheme.onSurface,
+                    color = AppColors.White,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
                 )
@@ -76,14 +84,15 @@ fun PoseModeCard(
             Text(
                 text = stringResource(modeDescriptionRes(mode)),
                 style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                color = AppColors.LightGray,
             )
         }
     }
 }
 
-private fun modeDescriptionRes(mode: PoseMode): Int = when (mode) {
+internal fun modeDescriptionRes(mode: PoseMode): Int = when (mode) {
     PoseMode.SOLO -> R.string.pose_mode_solo_desc
     PoseMode.COUPLE -> R.string.pose_mode_couple_desc
     PoseMode.GROUP -> R.string.pose_mode_group_desc
+    PoseMode.FREE -> R.string.pose_mode_free_desc
 }

@@ -14,8 +14,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import com.posepilot.app.core.theme.AppColors
 
 @Composable
 fun SectionHeader(
@@ -32,32 +34,37 @@ fun SectionHeader(
         Text(
             text = title,
             style = MaterialTheme.typography.titleMedium,
-            color = MaterialTheme.colorScheme.onSurface,
+            color = AppColors.White,
         )
         if (actionText != null && onAction != null) {
             Text(
                 text = actionText,
                 style = MaterialTheme.typography.labelLarge,
-                color = MaterialTheme.colorScheme.primary,
+                color = AppColors.LightGray,
                 modifier = Modifier
                     .padding(start = 16.dp)
-                    .clickable(onClick = onAction),
+                    .clickable(onClick = onAction)
+                    .testTag("section_action"),
             )
         }
     }
 }
 
 @Composable
-fun EmptyState(
+fun EmptyStateView(
     title: String,
     modifier: Modifier = Modifier,
-    subtitle: String? = null,
+    body: String? = null,
     icon: ImageVector? = null,
+    actionText: String? = null,
+    onAction: (() -> Unit)? = null,
+    testTag: String = "empty_state",
 ) {
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .padding(horizontal = 24.dp, vertical = 32.dp),
+            .padding(horizontal = 24.dp, vertical = 32.dp)
+            .testTag(testTag),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
@@ -66,21 +73,28 @@ fun EmptyState(
                 imageVector = icon,
                 contentDescription = null,
                 modifier = Modifier.size(32.dp),
-                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                tint = AppColors.Gray,
             )
         }
         Text(
             text = title,
-            style = MaterialTheme.typography.bodyLarge,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            style = MaterialTheme.typography.titleSmall,
+            color = AppColors.LightGray,
             textAlign = TextAlign.Center,
         )
-        if (subtitle != null) {
+        if (body != null) {
             Text(
-                text = subtitle,
+                text = body,
                 style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                color = AppColors.Gray,
                 textAlign = TextAlign.Center,
+            )
+        }
+        if (actionText != null && onAction != null) {
+            SecondaryButton(
+                text = actionText,
+                onClick = onAction,
+                modifier = Modifier.padding(top = 8.dp),
             )
         }
     }

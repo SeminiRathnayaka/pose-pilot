@@ -1,54 +1,38 @@
 package com.posepilot.app.core.theme
 
-import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
-import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Shape
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.ui.unit.dp
 
-private val LightColors = lightColorScheme(
-    primary = AppColors.Accent,
-    onPrimary = AppColors.OnAccent,
-    primaryContainer = AppColors.Accent,
-    onPrimaryContainer = AppColors.OnAccent,
-    secondary = AppColors.LightOnSurface,
-    onSecondary = AppColors.LightSurface,
-    secondaryContainer = AppColors.LightSurfaceVariant,
-    onSecondaryContainer = AppColors.LightOnSurface,
-    background = AppColors.LightBackground,
-    onBackground = AppColors.LightOnSurface,
-    surface = AppColors.LightSurface,
-    onSurface = AppColors.LightOnSurface,
-    surfaceVariant = AppColors.LightSurfaceVariant,
-    onSurfaceVariant = AppColors.LightOnSurfaceVariant,
-    outline = AppColors.LightOutline,
-    outlineVariant = AppColors.LightOutlineVariant,
-    error = AppColors.Error,
-    onError = AppColors.LightOnError,
-)
-
-private val DarkColors = darkColorScheme(
-    primary = AppColors.AccentDark,
-    onPrimary = AppColors.OnAccentDark,
-    primaryContainer = AppColors.AccentDark,
-    onPrimaryContainer = AppColors.OnAccentDark,
-    secondary = AppColors.DarkOnSurface,
-    onSecondary = AppColors.DarkBackground,
-    secondaryContainer = AppColors.DarkSurfaceVariant,
-    onSecondaryContainer = AppColors.DarkOnSurface,
-    background = AppColors.DarkBackground,
-    onBackground = AppColors.DarkOnSurface,
-    surface = AppColors.DarkSurface,
-    onSurface = AppColors.DarkOnSurface,
-    surfaceVariant = AppColors.DarkSurfaceVariant,
-    onSurfaceVariant = AppColors.DarkOnSurfaceVariant,
-    outline = AppColors.DarkOutline,
-    outlineVariant = AppColors.DarkOutlineVariant,
-    error = AppColors.DarkError,
-    onError = AppColors.DarkOnError,
+private val PosePilotColors = darkColorScheme(
+    primary = AppColors.White,
+    onPrimary = AppColors.DeepNavy,
+    primaryContainer = AppColors.DarkGray,
+    onPrimaryContainer = AppColors.White,
+    secondary = AppColors.LightGray,
+    onSecondary = AppColors.DeepNavy,
+    secondaryContainer = AppColors.DarkGray,
+    onSecondaryContainer = AppColors.White,
+    tertiary = AppColors.Gray,
+    onTertiary = AppColors.DeepNavy,
+    tertiaryContainer = AppColors.Navy,
+    onTertiaryContainer = AppColors.LightGray,
+    background = AppColors.DeepNavy,
+    onBackground = AppColors.White,
+    surface = AppColors.Navy,
+    onSurface = AppColors.White,
+    surfaceVariant = AppColors.DarkGray,
+    onSurfaceVariant = AppColors.LightGray,
+    surfaceTint = AppColors.White,
+    outline = AppColors.LightGray,
+    outlineVariant = AppColors.FaintBorder,
+    error = AppColors.LightGray,
+    onError = AppColors.DeepNavy,
+    inverseSurface = AppColors.LightGray,
+    inverseOnSurface = AppColors.DeepNavy,
+    scrim = AppColors.Scrim,
 )
 
 private val AppShapes = androidx.compose.material3.Shapes(
@@ -60,12 +44,9 @@ private val AppShapes = androidx.compose.material3.Shapes(
 )
 
 @Composable
-fun PosePilotTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
-    content: @Composable () -> Unit,
-) {
+fun PosePilotTheme(content: @Composable () -> Unit) {
     MaterialTheme(
-        colorScheme = if (darkTheme) DarkColors else LightColors,
+        colorScheme = PosePilotColors,
         typography = AppTypography,
         shapes = AppShapes,
         content = content,

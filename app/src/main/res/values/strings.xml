@@ -1,39 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">PosePilot</string>
-    <string name="app_tagline">Pose guidance for better photos</string>
 
     <string name="nav_home">Home</string>
+    <string name="nav_explore">Explore</string>
     <string name="nav_camera">Camera</string>
-    <string name="nav_poses">Poses</string>
     <string name="nav_history">History</string>
     <string name="nav_profile">Profile</string>
 
-    <string name="home_greeting">Strike a better pose</string>
-    <string name="home_choose_mode">Choose a mode</string>
-    <string name="home_best_score_title">Your best score</string>
-    <string name="home_best_score_empty">Your best score will appear here after your first session.</string>
-    <string name="home_camera_note">Camera access is required during a session.</string>
+    <string name="home_welcome">Let\'s get your best shot.</string>
+    <string name="home_subtitle">Find your pose. Build your confidence.</string>
+    <string name="hero_title">Ready for your next shot?</string>
+    <string name="hero_desc">Get pose ideas and make every photo count.</string>
+    <string name="button_start_shooting">Start Shooting</string>
+    <string name="button_explore_poses">Explore Poses</string>
+
+    <string name="section_modes">Quick modes</string>
+    <string name="section_popular">Popular Poses</string>
+    <string name="section_recent">Recently Used</string>
+    <string name="section_favorites">Favorites</string>
+    <string name="section_roulette">Pose Roulette</string>
+    <string name="section_tip">Photography tip</string>
+    <string name="sample_data_caption">Sample data</string>
+
+    <string name="home_recent_empty">Sessions you start will appear here.</string>
+    <string name="home_favorites_empty">Poses you favorite will show up here.</string>
+    <string name="home_roulette_body">Can\'t decide? Let Pose Roulette pick for you.</string>
+    <string name="home_roulette_action">Open Roulette</string>
 
     <string name="pose_mode_solo">Solo</string>
     <string name="pose_mode_couple">Couple</string>
     <string name="pose_mode_group">Group</string>
-    <string name="pose_mode_solo_desc">Single-person framing and balance.</string>
-    <string name="pose_mode_couple_desc">Two-person spacing and alignment.</string>
-    <string name="pose_mode_group_desc">Everyone visible, nobody cropped.</string>
+    <string name="pose_mode_free">Free Pose</string>
+    <string name="pose_mode_solo_desc">Find your best angle.</string>
+    <string name="pose_mode_couple_desc">Create natural moments together.</string>
+    <string name="pose_mode_group_desc">Get everyone into the frame.</string>
+    <string name="pose_mode_free_desc">Explore poses your way.</string>
 
-    <string name="button_start_session">Start session</string>
-    <string name="button_browse_poses">Browse poses</string>
+    <string name="explore_title">Explore Poses</string>
+    <string name="explore_subtitle">Find a pose that feels like you.</string>
+    <string name="search_hint">Search poses</string>
+    <string name="search_clear">Clear search</string>
+    <string name="explore_empty_title">No poses found</string>
+    <string name="explore_empty_body">Try a different search or pick another category.</string>
 
-    <string name="placeholder_camera_title">Camera coming next</string>
-    <string name="placeholder_camera_body">Phase 2 adds the live camera preview, capture, and on-device pose detection.</string>
-    <string name="placeholder_poses_body">Phase 2 fills this screen with the full pose catalog for every mode.</string>
-    <string name="placeholder_history_title">History coming next</string>
-    <string name="placeholder_history_body">Phase 2 keeps a local log of sessions, photos, and scores.</string>
-    <string name="placeholder_profile_title">Profile coming next</string>
-    <string name="placeholder_profile_body">Phase 2 adds your name, settings, and saved favorites.</string>
+    <string name="category_all">All</string>
+    <string name="category_casual">Casual</string>
+    <string name="category_fashion">Fashion</string>
+    <string name="category_street">Street</string>
+    <string name="category_sitting">Sitting</string>
+    <string name="category_standing">Standing</string>
+    <string name="category_walking">Walking</string>
+    <string name="category_professional">Professional</string>
+    <string name="category_graduation">Graduation</string>
+    <string name="category_instagram">Instagram</string>
+    <string name="category_outdoor">Outdoor</string>
 
-    <string name="sample_catalog">Sample catalog</string>
-    <string name="history_empty">Your best score will appear here after your first session.</string>
-    <string name="profile_name_hint">Your name</string>
+    <string name="difficulty_easy">Easy</string>
+    <string name="difficulty_medium">Medium</string>
+    <string name="difficulty_hard">Hard</string>
+    <string name="details_instructions">How to do it</string>
+    <string name="button_try_pose">Try This Pose</string>
+    <string name="favorite_add">Add to favorites</string>
+    <string name="favorite_remove">Remove from favorites</string>
+    <string name="details_thumbnail_caption">Sample placeholder — photo references arrive with the camera feature.</string>
+
+    <string name="camera_permission_title">Camera access required</string>
+    <string name="camera_permission_body">PosePilot needs camera access to help you frame photos and guide your poses.</string>
+    <string name="button_allow_camera">Allow Camera</string>
+    <string name="button_not_now">Not Now</string>
+    <string name="camera_error_title">Camera unavailable</string>
+    <string name="camera_error_body">We couldn\'t start the camera. Please try again.</string>
+    <string name="button_try_again">Try Again</string>
+    <string name="button_go_back">Go Back</string>
+
+    <string name="camera_status_preview">Camera UI Preview</string>
+    <string name="camera_status_guidance">Pose guidance will appear here</string>
+    <string name="camera_preview_placeholder">Live camera preview will appear here.</string>
+    <string name="camera_flash">Flash</string>
+    <string name="camera_more">More options</string>
+    <string name="camera_shutter">Shutter</string>
+    <string name="camera_gallery">Gallery</string>
+    <string name="camera_switch">Switch camera</string>
+    <string name="camera_controls">Controls</string>
+    <string name="control_timer">Timer</string>
+    <string name="control_grid">Grid</string>
+    <string name="control_mirror">Mirror</string>
+    <string name="control_auto_capture">Auto Capture</string>
+    <string name="camera_reference">Reference pose</string>
+    <string name="camera_state_countdown">Countdown</string>
+    <string name="camera_state_capturing">Capturing</string>
+    <string name="camera_state_pose_ready">Pose ready</string>
+    <string name="camera_state_menu">UI preview states</string>
+    <string name="camera_state_permission">Permission explanation</string>
+    <string name="camera_state_error">Camera error</string>
+    <string name="camera_settings_entry">Camera settings</string>
+
+    <string name="roulette_title">Pose Roulette</string>
+    <string name="roulette_desc">Let your next pose be a surprise.</string>
+    <string name="roulette_count_label">Poses per round</string>
+    <string name="button_start_roulette">Start Roulette</string>
+    <string name="action_try_pose">Try Pose</string>
+    <string name="action_next_pose">Next Pose</string>
+    <string name="action_save_favorite">Save Favorite</string>
+    <string name="action_saved_favorite">Saved</string>
+    <string name="roulette_drawing">Drawing a pose…</string>
+    <string name="roulette_empty">No poses available for the roulette.</string>
+
+    <string name="history_title">Your History</string>
+    <string name="filter_all">All</string>
+    <string name="filter_favorites">Favorites</string>
+    <string name="history_empty_title">Your best shots will live here.</string>
+    <string name="history_empty_body">Your captured photos will appear here when photo saving is implemented.</string>
+
+    <string name="profile_title">Profile</string>
+    <string name="profile_name_placeholder">Your name</string>
+    <string name="button_edit_profile">Edit profile</string>
+    <string name="entry_settings">Settings</string>
+    <string name="entry_privacy">Privacy</string>
+    <string name="entry_help_about">Help &amp; About</string>
+    <string name="stat_photos">Photos taken</string>
+    <string name="stat_poses_explored">Poses explored</string>
+    <string name="stat_favorites">Favorites</string>
+    <string name="journey_title">Your Photography Journey</string>
+    <string name="journey_body">Your personal statistics will appear here as you use PosePilot.</string>
+    <string name="toast_edit_profile">Profile editing arrives in a later phase.</string>
+
+    <string name="settings_title">Settings</string>
+    <string name="settings_section_camera">Camera preferences</string>
+    <string name="settings_section_guidance">Pose guidance</string>
+    <string name="settings_section_appearance">Appearance</string>
+    <string name="settings_section_privacy">Privacy</string>
+    <string name="settings_section_about">About</string>
+    <string name="setting_countdown">Countdown duration</string>
+    <string name="setting_value_countdown_3s">3 s</string>
+    <string name="setting_value_countdown_5s">5 s</string>
+    <string name="setting_value_countdown_10s">10 s</string>
+    <string name="setting_grid_overlay">Grid overlay</string>
+    <string name="setting_mirror">Mirror selfie preview</string>
+    <string name="setting_auto_capture">Auto capture</string>
+    <string name="setting_default_camera">Default camera</string>
+    <string name="setting_guidance_intensity">Guidance intensity</string>
+    <string name="setting_haptic">Haptic feedback</string>
+    <string name="setting_sound">Sound feedback</string>
+    <string name="setting_reference_overlay">Reference pose overlay</string>
+    <string name="setting_theme">Theme preference</string>
+    <string name="setting_app_appearance">App appearance</string>
+    <string name="setting_value_dark">Dark (default)</string>
+    <string name="setting_value_navy">PosePilot Navy</string>
+    <string name="value_camera_front">Front</string>
+    <string name="value_camera_back">Back</string>
+    <string name="value_intensity_low">Low</string>
+    <string name="value_intensity_medium">Medium</string>
+    <string name="value_intensity_high">High</string>
+    <string name="privacy_camera_title">Camera permissions</string>
+    <string name="privacy_camera_body">PosePilot will ask for camera access only when the camera feature is enabled in a later phase.</string>
+    <string name="privacy_processing_title">On-device processing</string>
+    <string name="privacy_processing_body">Pose analysis will run on your device in a future update. Nothing is uploaded today.</string>
+    <string name="about_description">PosePilot helps you discover poses, practice posture, and take better photos with guidance that will soon be powered by on-device AI.</string>
+    <string name="about_acknowledgements">Built with Jetpack Compose, Material 3, and Navigation Compose. Open-source libraries are acknowledged under their respective licenses.</string>
+    <string name="about_version">Version</string>
+
+    <string name="action_back">Back</string>
+    <string name="tip_next_title">Golden hour is your friend</string>
+    <string name="tip_next_body">Shoot 30–60 minutes after sunrise or before sunset for soft, flattering light.</string>
 </resources>

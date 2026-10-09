@@ -16,9 +16,9 @@ class NavigationTest {
     val composeRule = createAndroidComposeRule<MainActivity>()
 
     @Test
-    fun bottomNavOpensPosesScreen() {
-        composeRule.onNodeWithTag("nav_poses").performClick()
-        composeRule.onNodeWithTag("screen_poses").assertIsDisplayed()
+    fun bottomNavOpensExploreScreen() {
+        composeRule.onNodeWithTag("nav_explore").performClick()
+        composeRule.onNodeWithTag("screen_explore").assertIsDisplayed()
     }
 
     @Test

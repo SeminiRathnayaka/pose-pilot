@@ -11,6 +11,7 @@ class PoseModeTest {
         assertEquals(PoseMode.SOLO, PoseMode.fromKey("solo"))
         assertEquals(PoseMode.COUPLE, PoseMode.fromKey("couple"))
         assertEquals(PoseMode.GROUP, PoseMode.fromKey("group"))
+        assertEquals(PoseMode.FREE, PoseMode.fromKey("free"))
     }
 
     @Test
@@ -20,7 +21,7 @@ class PoseModeTest {
     }
 
     @Test
-    fun `entries cover exactly three modes`() {
-        assertEquals(3, PoseMode.entries.size)
+    fun `entries cover exactly four modes`() {
+        assertEquals(4, PoseMode.entries.size)
     }
 }
